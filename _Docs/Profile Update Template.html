@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%); color: white; padding: 30px; text-align: center; border-radius: 8px 8px 0 0; }
+        .content { background: #f9f9f9; padding: 30px; border-radius: 0 0 8px 8px; }
+        .button { background: #4A90E2; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; display: inline-block; margin: 20px 0; }
+        .info-box { background: #E3F2FD; padding: 15px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #4A90E2; }
+        .footer { text-align: center; padding: 20px; font-size: 12px; color: #666; }
+        .security-note { background: #FFF3CD; padding: 10px; border-radius: 6px; border-left: 4px solid #FFC107; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✓ Profile Updated!</h1>
+        </div>
+        <div class="content">
+            <h2>Welcome back, {{first_name}}!</h2>
+            <p>Your profile at Gallagher Art School has been successfully updated.</p>
+            
+            <div class="info-box">
+                <h3>Updated Information:</h3>
+                 {{#has_goals}}
+                    <p><strong>Goals:</strong> {{goals_list}}</p>
+                {{/has_goals}}
+                {{^has_goals}}
+                    <p><strong>Goals:</strong> Not specified</p>
+                {{/has_goals}}
+
+                {{#has_experience}}
+                    <p><strong>Experience Level:</strong> {{experience_level}}</p>
+                {{/has_experience}}
+                {{^has_experience}}
+                    <p><strong>Experience Level:</strong> Not specified</p>
+                {{/has_experience}}
+
+                {{#has_interests}}
+                    <p><strong>Interests:</strong> {{interests_list}}</p>
+                {{/has_interests}}
+                {{^has_interests}}
+                    <p><strong>Interests:</strong> Not specified</p>
+                {{/has_interests}}
+
+                {{#has_referral}}
+                    <p><strong>How you heard about us:</strong> {{referral_source}}</p>
+                {{/has_referral}}
+                {{^has_referral}}
+                    <p><strong>How you heard about us:</strong> Not specified</p>
+                {{/has_referral}}
+            </div>
+
+            {{#has_gift_link}}
+            <div class="gift-link-box">
+                <p>🎁 You mentioned interest in a gift certificate! You can find more information or purchase one here:</p>
+                <p><a href="{{gift_certificate_link}}">{{gift_certificate_link}}</a></p>
+            </div>
+            {{/has_gift_link}}
+            
+            <div class="security-note">
+                <p><strong>🔒 Security Note:</strong> Your account login details remain the same. If you didn't make these changes, please contact us immediately at info@gallagherartschool.com</p>
+            </div>
+            
+            <p>We're excited to continue your art journey with us!</p>
+            
+            <a href="https://gallagherartschool.com/classes" class="button">Explore Our Classes</a>
+            
+            <p>Questions? Reply to this email anytime.</p>
+            
+            <p>Best regards,<br>The Gallagher Art School Team</p>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 Gallagher Art School. All rights reserved.</p>
+            <p><a href="{{unsubscribe_url}}" style="color: #999; text-decoration: none;">Unsubscribe</a></p>
+        </div>
+    </div>
+</body>
+</html>

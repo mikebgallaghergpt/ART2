@@ -1,0 +1,123 @@
+From: Michael <info@gallagherartschool.com>
+Date: Sat, 25 Oct 2025 06:33:54 +0000
+Subject: Profile Update Confirmation
+Message-Id: <48f5b6ac-1444-4ed1-9cf5-d24c7dbca428@mtasv.net>
+Reply-To: michael@gallagherartschool.com
+To: mikebgallagher@mac.com
+Feedback-ID: s16774646-_:s16774646:a447541:postmark
+X-Complaints-To: abuse@postmarkapp.com
+X-Job: 447541_16774646
+X-PM-Message-Id: 48f5b6ac-1444-4ed1-9cf5-d24c7dbca428
+X-PM-RCPT: |bTB8NDQ3NTQxfDE2Nzc0NjQ2fG1pa2ViZ2FsbGFnaGVyQG1hYy5jb20=|
+X-PM-Message-Options: v1;1.LRryOXlwPfzDIbbGC9x6lQ.8FCPTrzeTa8khT5KiFNo2yKmyZnfBfXRajj1ggJjk50CT24IVZYxzsbFbCWPXje_3wmVE1J__dsT2CMglkVMsQtn7TWq_-VyxqDXi-uScw2RFo9Ur-loj_nsFciebdYXQoS0TXjDgXDgDEZFbFNyHnRbbgZyDg0qfUt9uyAhVLagBb8oKyh_4mRNUxPvzt_Q
+X-dkim-options: s=20250827172256pm;d=gallagherartschool.com
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:/=
+/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http=
+://www.w3.org/1999/xhtml"><head>
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sca=
+le=3D1.0">
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUT=
+F-8">
+  <title></title>
+  <!--
+    The style block is collapsed on page load to save you some scrolli=
+ng.
+    Postmark automatically inlines all CSS properties for maximum emai=
+l client
+    compatibility. You can just update styles here, and Postmark does =
+the rest.
+    -->
+ =20
+</head>
+<body style=3D"font-family: Arial, sans-serif; line-height: 1.6; color=
+: #333333;">
+ =20
+
+
+   =20
+
+
+    <div class=3D"container" style=3D"max-width: 600px; margin: 0 auto=
+; padding: 20px;">
+        <div class=3D"header" style=3D"background: linear-gradient(135=
+deg, #4A90E2 0, #357ABD 100%); color: #FFFFFF; padding: 30px; text-ali=
+gn: center; border-radius: 8px 8px 0 0;">
+            <h1>=E2=9C=93 Profile Updated!</h1>
+        </div>
+        <div class=3D"content" style=3D"background: #F9F9F9; padding: =
+30px; border-radius: 0 0 8px 8px;">
+            <h2>Welcome back, Michael!</h2>
+            <p>Your profile preferences at Gallagher Art School have b=
+een successfully updated.</p>
+
+            <div class=3D"info-box" style=3D"background: #E3F2FD; padd=
+ing: 15px; border-radius: 6px; margin: 20px 0; border-left: 4px solid =
+#4A90E2;">
+                <h3>Updated Information:</h3>
+                =20
+                    <p><strong>Goals:</strong> </p>
+               =20
+               =20
+
+               =20
+                    <p><strong>Experience Level:</strong> </p>
+               =20
+               =20
+
+               =20
+                    <p><strong>Interests:</strong> </p>
+               =20
+               =20
+
+               =20
+                    <p><strong>How you heard about us:</strong> </p>
+               =20
+               =20
+            </div>
+
+           =20
+            <div class=3D"gift-link-box" style=3D"background: #FFF3CD;=
+ padding: 15px; border-radius: 6px; border-left: 4px solid #FFC107; ma=
+rgin: 20px 0;">
+                <p>=F0=9F=8E=81 You mentioned interest in a gift certi=
+ficate! You can find more information or purchase one here:</p>
+                <p><a href=3D""></a></p>
+            </div>
+           =20
+            <div class=3D"security-note" style=3D"background: #FFF3CD;=
+ padding: 10px; border-radius: 6px; border-left: 4px solid #FFC107; ma=
+rgin: 20px 0;">
+                <p><strong>=F0=9F=94=92 Security Note:</strong> Your a=
+ccount login details remain the same. If you didn't make these changes=
+, please contact us immediately at info@gallagherartschool.com</p>
+            </div>
+
+            <p>We're excited to continue your art journey with us!</p>
+
+            <a href=3D"https://gallagherartschool.com/classes" class=3D=
+"button" style=3D"background: #4A90E2; color: #FFFFFF; padding: 12px 3=
+0px; text-decoration: none; border-radius: 6px; display: inline-block;=
+ margin: 20px 0;">Explore Our Classes</a>
+
+            <p>Questions? Reply to this email anytime.</p>
+
+            <p>Best regards,<br>The Gallagher Art School Team</p>
+        </div>
+
+        <div class=3D"footer" style=3D"text-align: center; padding: 20=
+px; font-size: 12px; color: #666666;">
+            <p>=C2=A9  Gallagher Art School. All rights reserved.</p> =
+{/* Assuming Postmark injects current_year */}
+            <p><a href=3D"" style=3D"color: #999; text-decoration: non=
+e;">Unsubscribe</a></p>
+        </div>
+    </div>
+
+
+
+
+</body></html>

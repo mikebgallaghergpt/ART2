@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header-welcome { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; text-align: center; border-radius: 8px 8px 0 0; }
+        .header-update { background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%); color: white; padding: 30px; text-align: center; border-radius: 8px 8px 0 0; }
+        .content { background: #f9f9f9; padding: 30px; border-radius: 0 0 8px 8px; }
+        .button-welcome { background: #667eea; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; display: inline-block; margin: 20px 0; }
+        .button-update { background: #4A90E2; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; display: inline-block; margin: 20px 0; }
+        .info-box-welcome { background: white; padding: 15px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #667eea; }
+        .info-box-update { background: #E3F2FD; padding: 15px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #4A90E2; }
+        .footer { text-align: center; padding: 20px; font-size: 12px; color: #666; }
+        .security-note { background: #FFF3CD; padding: 10px; border-radius: 6px; border-left: 4px solid #FFC107; margin: 20px 0; }
+        .gift-link-box { background: #FFF3CD; padding: 15px; border-radius: 6px; border-left: 4px solid #FFC107; margin: 20px 0; }
+        .unsubscribe { color: #999; text-decoration: none; }
+    </style>
+</head>
+<body> <div class="container">
+        <div class="{{#isUpdate}}header-update{{/isUpdate}}{{^isUpdate}}header-welcome{{/isUpdate}}">
+            <h1>{{#isUpdate}}✓ Profile Updated!{{/isUpdate}}{{^isUpdate}}Welcome to Gallagher Art School!{{/isUpdate}}</h1>
+        </div>
+        <div class="content">
+            {{#isUpdate}}
+              <h2>Welcome back, {{first_name}}!</h2>
+            {{/isUpdate}}
+            {{^isUpdate}}
+              <h2>Hi {{first_name}},</h2>
+            {{/isUpdate}}
+
+            {{#isUpdate}}
+                <p>Your profile preferences at Gallagher Art School have been successfully updated.</p>
+            {{/isUpdate}}
+            {{^isUpdate}}
+                <p>Thank you for your interest in Gallagher Art School! We're thrilled to have you join our community of passionate artists.</p>
+            {{/isUpdate}}
+
+            <div class="{{#isUpdate}}info-box-update{{/isUpdate}}{{^isUpdate}}info-box-welcome{{/isUpdate}}">
+                <h3>{{#isUpdate}}Updated Information:{{/isUpdate}}{{^isUpdate}}Your Profile Selections:{{/isUpdate}}</h3>
+                <p><strong>Goals:</strong> {{goals_list}}</p>
+                <p><strong>Experience Level:</strong> {{experience_level}}</p>
+                <p><strong>Interests:</strong> {{interests_list}}</p>
+                <p><strong>How you heard about us:</strong> {{referral_source}}</p>
+            </div>
+
+            {{#gift_certificate_link}}
+            <div class="gift-link-box">
+                <p>🎁 You mentioned interest in a gift certificate! You can find more information or purchase one here:</p>
+                <p><a href="{{gift_certificate_link}}">{{gift_certificate_link}}</a></p>
+            </div>
+            {{/gift_certificate_link}}
+
+            {{#isUpdate}}
+            <div class="security-note">
+                <p><strong>🔒 Security Note:</strong> Your account login details remain the same. If you didn't make these changes, please contact us immediately at info@gallagherartschool.com</p>
+            </div>
+            {{/isUpdate}}
+
+            {{#isUpdate}}
+                <p>We're excited to continue your art journey with us!</p>
+            {{/isUpdate}}
+            {{^isUpdate}}
+                <p>Based on your interests, we think you'll love our upcoming classes. We'll be in touch soon with personalized recommendations!</p>
+            {{/isUpdate}}
+
+            <a href="https://gallagherartschool.com/classes" class="{{#isUpdate}}button-update{{/isUpdate}}{{^isUpdate}}button-welcome{{/isUpdate}}">Explore Our Classes</a>
+
+            <p>Questions? Reply to this email anytime.</p>
+
+            <p>Best regards,<br>The Gallagher Art School Team</p>
+        </div>
+
+        <div class="footer">
+            <p>© {{current_year}} Gallagher Art School. All rights reserved.</p>
+            <p><a href="{{unsubscribe_url}}" class="unsubscribe">Unsubscribe</a></p>
+        </div>
+    </div>
+     <hr> <p>--- TEMPLATE TEST DATA ---</p>
+     <p>Test Name: {{first_name}}</p>
+     <p>Test Goals: {{goals_list}}</p>
+     <p>Test Experience: {{experience_level}}</p>
+     <p>Test Interests: {{interests_list}}</p>
+     <p>Test Referral: {{referral_source}}</p>
+     <p>Test Gift Link: {{gift_certificate_link}}</p>
+     <p>Is Update Flag: {{isUpdate}}</p>
+     <p>--- END TEST DATA ---</p>
+
+</body> </html>

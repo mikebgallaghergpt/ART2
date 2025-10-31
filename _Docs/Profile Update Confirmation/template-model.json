@@ -1,0 +1,15 @@
+{
+  "first_name": "Michael",
+  "goals_list": "Gift certificate for someone",
+  "experience_level": "intermediate",
+  "interests_list": "Painting",
+  "referral_source": "Ad",
+  "gift_certificate_link": "https://gallagherartschool.com/gift-certificate/",
+  "has_goals": true,
+  "has_experience": true,
+  "has_interests": true,
+  "has_referral": true,
+  "has_gift_link": true,
+  "product_name": "Gallagher Art School",
+  "company_name": "Gallagher Art School"
+}

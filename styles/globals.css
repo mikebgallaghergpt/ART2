@@ -1,0 +1,322 @@
+/* globals.css - Gallagher Art School Design System */
+/* Based on official design specification */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* DESIGN TOKENS - Per Spec */
+
+    /* Colors */
+    --primary: #000000;
+    --accent-green: #22C55E;
+    --neutral-gray: #E5E7EB;
+    --light-bg: #F9FAFB;
+    --error-red: #EF4444;
+    --focus-blue: #2563EB;
+
+    /* Typography Colors */
+    --text-primary: #111111;
+    --text-secondary: #6B7280;
+    --text-tertiary: #374151;
+    --text-placeholder: #9CA3AF;
+
+    /* Border Colors */
+    --border-default: #D1D5DB;
+    --border-focus: #2563EB;
+
+    /* Spacing Scale */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+
+    /* Typography Scale */
+    --font-size-xs: 12px;
+    --font-size-sm: 13px;
+    --font-size-base: 14px;
+    --font-size-md: 15px;
+    --font-size-lg: 16px;
+    --font-size-xl: 24px;
+    --font-size-2xl: 48px;
+
+    /* Component Sizes */
+    --input-height: 44px;
+    --button-height: 44px;
+    --progress-circle: 40px;
+    --progress-icon: 18px;
+
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* Brand Title */
+  .brand-title {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text-primary);
+  }
+
+  /* Step Subtitle */
+  .step-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--text-secondary);
+  }
+
+  /* Field Labels */
+  .field-label {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--text-tertiary);
+  }
+
+  /* Input Fields */
+  .input-field {
+    height: var(--input-height);
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-default);
+    font-family: 'Inter', sans-serif;
+    font-size: var(--font-size-md);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+  }
+
+  .input-field::placeholder {
+    color: var(--text-placeholder);
+  }
+
+  .input-field:focus {
+    outline: none;
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+
+  /* Buttons */
+  .btn-primary {
+    height: var(--button-height);
+    padding: 12px 24px;
+    background: var(--primary);
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    line-height: 1.3;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    background: #1a1a1a;
+  }
+
+  .btn-secondary {
+    height: var(--button-height);
+    padding: 12px 24px;
+    background: transparent;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+  }
+
+  .btn-secondary:hover {
+    background: #F3F4F6;
+  }
+
+  /* Progress Indicators */
+  .progress-step {
+    width: var(--progress-circle);
+    height: var(--progress-circle);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .progress-step.active {
+    background: var(--primary);
+    color: white;
+  }
+
+  .progress-step.completed {
+    background: var(--accent-green);
+    color: white;
+  }
+
+  .progress-step.upcoming {
+    background: #D1D5DB;
+    color: #9CA3AF;
+  }
+
+  .progress-step:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Form Card */
+  .form-card {
+    max-width: 400px;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    background: var(--light-bg);
+    border-radius: var(--radius-sm);
+  }
+
+  /* Carousel Overlay */
+  .carousel-overlay {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  /* Error Message */
+  .error-message {
+    margin-top: 6px;
+    font-size: var(--font-size-sm);
+    color: var(--error-red);
+  }
+}
+
+/* === START: SINGLE MERGED UTILITIES LAYER === */
+@layer utilities {
+  /* Spacing Utilities */
+  .gap-xs { gap: var(--spacing-xs); }
+  .gap-sm { gap: var(--spacing-sm); }
+  .gap-md { gap: var(--spacing-md); }
+  .gap-lg { gap: var(--spacing-lg); }
+
+  .p-form { padding: var(--spacing-lg) var(--spacing-xl); }
+
+  /* Animation Utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Focus Visible */
+  .focus-visible {
+    outline: 2px solid var(--focus-blue);
+    outline-offset: 2px;
+  }
+
+  /*
+   * ========================================
+   * FLUID TYPOGRAPHY FIX (FORM) - v9 (Smaller Title)
+   * ========================================
+  */
+  .text-4xl {
+    /* "Join Gallagher Art School" - Make this smaller again */
+    font-size: clamp(1rem, 2.2vw, 1.375rem) !important; /* ~16px to 22px */
+  }
+
+  .text-3xl {
+    font-size: clamp(1.2rem, 3vw, 1.5rem) !important; /* Kept from previous */
+  }
+
+  .text-lg {
+    /* "Tell us about yourself" / "What brings you here?" etc. */
+    font-size: clamp(0.875rem, 1.8vw, 1rem) !important; /* Kept from previous */
+  }
+
+  .text-base {
+    /* Input field text */
+    font-size: clamp(0.875rem, 1.8vw, 0.9rem) !important; /* Kept from previous */
+  }
+
+  .text-xs {
+    /* Labels */
+    font-size: clamp(0.7rem, 1.5vw, 0.75rem) !important; /* Kept from previous */
+  }
+
+  .text-lg.font-medium {
+    /* Interest labels "Drawing", "Painting" */
+    font-size: clamp(1rem, 2.2vw, 1.125rem) !important; /* Kept from previous */
+  }
+
+  /*
+   * ========================================
+   * FLUID TYPOGRAPHY FIX (CAROUSEL) - v9 (Keep Large Title)
+   * ========================================
+  */
+  @media (min-width: 1024px) {
+    .lg\:text-5xl {
+      /* "Gallagher Art School" - Kept large size */
+      font-size: clamp(1.5rem, 3.5vw, 3rem) !important; /* ~24px to 48px */
+    }
+
+    .lg\:text-2xl {
+      /* "Master the Art of Drawing" - Kept from v5 */
+      font-size: clamp(1rem, 1.8vw, 1.125rem) !important;
+    }
+
+    .lg\:text-xl {
+      /* "Expert instruction..." - Kept from v5 */
+      font-size: clamp(0.875rem, 1.5vw, 0.95rem) !important;
+    }
+
+    .lg\:text-lg {
+      /* "From beginner sketches..." - Kept from v5 */
+      font-size: clamp(0.8rem, 1.2vw, 0.875rem) !important;
+    }
+  }
+}
+/* === END: SINGLE MERGED UTILITIES LAYER === */
+
+
+/* Mobile Responsive Typography */
+@media (max-width: 767px) {
+  :root {
+    --font-size-2xl: 30px;
+    --font-size-xl: 20px;
+  }
+
+  .form-card {
+    padding: 20px 32px;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .form-card {
+    max-width: 420px;
+    padding: 28px 36px;
+  }
+}
